@@ -22,7 +22,11 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: './index.html'
       }),
-      new GenerateSW(),
+      // new GenerateSW(),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E.',
@@ -31,6 +35,8 @@ module.exports = () => {
         theme_color: '#7eb4e2',
         start_url: './',
         publicPath: './',
+        inject: true,
+        fingerprints: false,
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -39,8 +45,6 @@ module.exports = () => {
           },
         ],
       }),
-      
-      
     ],
 
     module: {
