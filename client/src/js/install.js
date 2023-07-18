@@ -7,7 +7,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
     // Stash the event so it can be triggered later.
     window.deferredPrompt = event;
     // Update UI notify the user they can install the PWA
-    butInstall.classList.toggle("hidden", false)
+    butInstall.classList.toggle('hidden', false);
 });
 
 // TODO: Implement a click event handler on the `butInstall` element
@@ -29,6 +29,5 @@ butInstall.addEventListener('click', async () => {
 // TODO: Add an handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => { 
     window.deferredPrompt = null;
-    butInstall.classList.toggle("hidden", true)
 
 });
