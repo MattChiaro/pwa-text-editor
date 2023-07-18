@@ -21,6 +21,8 @@ To download the offline version, simply click the `install` button in the top le
 
 ![application within browser](./readme-images/jate-demo.png)
 
+![standalone application](./readme-images/downloaded-jate.png)
+
 
 ## License
 
