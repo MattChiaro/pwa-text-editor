@@ -33,7 +33,9 @@ registerRoute(
       // CSS
       request.destination === 'style' ||
       // JavaScript
-      request.destination === 'script'
+      request.destination === 'script' ||
+
+      request.destination === "manifest"
 
     );
   },
